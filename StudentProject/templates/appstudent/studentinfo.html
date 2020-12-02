@@ -1,0 +1,20 @@
+<h2>Student Name : {{ data.fullname }}</h2>
+{% csrf_token %}
+<form method="post">
+    <table>
+        <tr>
+            <td><b>Student Name</b></td><td>{{ data.fullname }}</td>
+            <td rowspan="3"><img src="{{ data.photo.url }}" height="150" width="150" alt="image"></img></td>
+        </tr>
+        <tr>
+            <td><b>Email</b> </td><td>{{ data.Email }}</td>
+        </tr>
+        <tr>
+            <td><b>Department</b></td><td>{{ data.department }}</td>
+        </tr>
+        <tr>
+            <td><b>Mobile No </b></td><td>{{ data.mobile }}</td>
+        </tr>
+    </table>
+</form>
+ <a href="{% url 'home' %}"><input type="submit" value="Home"></a>

@@ -1,0 +1,15 @@
+<h2>{{ data.department }}</h2>
+<table>
+{% for ele in data %}
+    <thead>
+    <tr>
+    <td>FullName</td><td>email</td><td>Marks Inter</td>
+    </tr>
+    </thead>
+    <tr>
+    <td>{{ data.fullname }}</td>
+    <td>{{ data.email }}</td>
+    <td>{{ data.marks_inter }}</td>
+    </tr>
+{% endfor %}
+</table>

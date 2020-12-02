@@ -1,0 +1,7 @@
+{% load static %}
+<form method="post" action="registration" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ regform.media }}
+    {{ regform.as_p }}
+    <a href="{% url 'home' %}"><input type="submit" value="Register"></a>
+</form>

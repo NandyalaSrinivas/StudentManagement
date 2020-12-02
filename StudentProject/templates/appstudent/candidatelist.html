@@ -1,0 +1,17 @@
+{% load static %}
+{% for ele in data %}
+<table>
+    <thead>
+    <tr>
+        <td>Full Name</td><td>Email</td><td>Department</td><td>Mobile</td>
+    </tr>
+    </thead>
+    <tr>
+        <td><a href="/{{ ele.id }}/student_info">{{ ele.fullname }}</a></td>
+        <td>{{ ele.email }}</td>
+        <td><a href="/{{ ele.id }}/DepartmentWise">{{ ele.department }}</a></td>
+        <td>{{ ele.mobile }}</td>
+    </tr>
+</table>
+
+{% endfor %}

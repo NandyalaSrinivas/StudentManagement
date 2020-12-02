@@ -1,0 +1,7 @@
+{% load static %}
+<form method="post" action="">
+    {% csrf_token %}
+    {{ applyform.as_p }}
+    <br>
+    <a href="{% url 'home' %}"><button type="submit">Submit</button></a>
+</form>
