@@ -1,17 +1,18 @@
 {% load static %}
-{% for ele in data %}
-<table>
+<center><h2>Selected Candidates List</h2></center>
+<table border="4" align="center">
     <thead>
     <tr>
         <td>Full Name</td><td>Email</td><td>Department</td><td>Mobile</td>
     </tr>
     </thead>
+    {% for ele in data %}
     <tr>
-        <td><a href="/{{ ele.id }}/student_info">{{ ele.fullname }}</a></td>
+        <td><a href="{{ ele.application_id }}/student_info">{{ ele.firstname }}</a></td>
         <td>{{ ele.email }}</td>
         <td><a href="/{{ ele.id }}/DepartmentWise">{{ ele.department }}</a></td>
         <td>{{ ele.mobile }}</td>
     </tr>
+    {% endfor %}
 </table>
 
-{% endfor %}
