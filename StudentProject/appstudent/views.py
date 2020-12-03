@@ -32,7 +32,7 @@ def registration(request):
 
 
 def candidatelist(request):
-    data = Register.objects.values("fullname", "email", "department", "mobile")
+    data = Register.objects.values("fastname", "email", "department", "mobile")
     #data = Application.objects.raw('select fullname, email, department,  from appstudent_application where is_verified = True')
     return render(request, "appstudent/candidatelist.html", {'data': data})
 
