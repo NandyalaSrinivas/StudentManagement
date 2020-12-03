@@ -1,15 +1,9 @@
-<h2>{{ data.department }}</h2>
+<h2>Department</h2>
 <table>
-{% for ele in data %}
-    <thead>
+    {% for ele in data %}
+    <thead>Department</thead>
     <tr>
-    <td>FullName</td><td>email</td><td>Marks Inter</td>
+        <td><a href="{{ ele.department }}/department_wise">{{ ele.department }}</a></td>
     </tr>
-    </thead>
-    <tr>
-    <td>{{ data.fullname }}</td>
-    <td>{{ data.email }}</td>
-    <td>{{ data.marks_inter }}</td>
-    </tr>
-{% endfor %}
+    {% endfor %}
 </table>
