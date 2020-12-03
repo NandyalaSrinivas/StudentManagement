@@ -46,8 +46,8 @@ def status(request):
     return redirect('home')
 
 
-def student_info(request, id):
-    data = get_object_or_404(Register, pk=id)
+def student_info(request, application_id):
+    data = get_object_or_404(Register, pk=application_id)
     return render(request, "appstudent/studentinfo.html", {'data': data})
 
 
