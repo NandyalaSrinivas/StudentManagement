@@ -6,6 +6,7 @@ class ApplicationAdmin(admin.ModelAdmin):
     list_display = ["fullname", "email", "marks_inter", "is_verified"]
     search_fields = ["fullname"]
     ordering = ["marks_inter"]
+    #list_editable = ("is_verified",)
 
 
 class RegisterAdmin(admin.ModelAdmin):
